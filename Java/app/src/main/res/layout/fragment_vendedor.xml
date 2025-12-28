@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#C9C5E3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <!-- LOG PROPIO DEL FRAGMENTO -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="#C9C5E3"
+            app:cardElevation="0dp">
+            <TextView
+                android:id="@+id/tv_resultado_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text=""
+                android:textColor="#333333"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/layout_seller_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:background="#F7C6DA"
+            android:padding="15dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Acciones de vendedor" android:textStyle="bold" android:paddingBottom="10dp" android:textColor="#3F1F2A" />
+            <EditText android:id="@+id/input_seller_private_key" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Clave privada vendedor (0x...)" android:textColorHint="#4D5059" android:inputType="textPassword" android:textColor="#3F1F2A" android:background="#FFFFFF" android:padding="10dp"/>
+            <EditText android:id="@+id/input_seller_escrow_id" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="ID del depósito" android:textColorHint="#4D5059" android:inputType="number" android:textColor="#3F1F2A" android:layout_marginTop="10dp" android:background="#FFFFFF" android:padding="10dp"/>
+            <Button android:id="@+id/btn_seller_check_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Estado pago" android:textAllCaps="false" android:backgroundTint="#3F1F2A" android:textColor="#FFFFFF" app:cornerRadius="8dp" android:layout_marginTop="10dp"/>
+            <Button android:id="@+id/btn_seller_receive" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Recibir pago" android:textAllCaps="false" android:backgroundTint="#3F1F2A" android:textColor="#FFFFFF" app:cornerRadius="8dp" android:layout_marginTop="10dp"/>
+            <Button android:id="@+id/btn_seller_back" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Volver" android:textAllCaps="false" android:backgroundTint="#4D5059" android:textColor="#FFFFFF" app:cornerRadius="8dp" android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

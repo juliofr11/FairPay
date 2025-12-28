@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#C9C5E3">
+
+    <!-- CABECERA -->
+    <TextView
+        android:id="@+id/text_titulo_Operaciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:text="Operaciones"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- CONTENEDOR SCROLL PRINCIPAL -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/text_titulo_Operaciones"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <!-- Botón 1: Iniciar Operaciones -->
+            <Button
+                android:id="@+id/button_realizar_operacion"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="10dp"
+                android:text="Iniciar operaciones"
+                android:textAllCaps="false"
+                android:backgroundTint="#6554D1"
+                android:textColor="@android:color/white"
+                app:cornerRadius="18dp"/>
+
+            <!-- CAJA DE LOG PRINCIPAL (Para mensajes del Hub) -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_result_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="#C9C5E3"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@+id/tv_resultado_log"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text=""
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+            </androidx.cardview.widget.CardView>
+
+            <!-- MENÚ SELECCIÓN ROL (Se muestra al pulsar Iniciar) -->
+            <LinearLayout
+                android:id="@+id/layout_main_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selecciona tu rol:"
+                    android:textSize="18sp"
+                    android:paddingBottom="10dp"
+                    android:layout_gravity="center"
+                    android:textColor="#333333" />
+
+                <Button
+                    android:id="@+id/btn_select_buyer"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Comprador"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#B8E4C9"
+                    android:textColor="#1D3B2F"
+                    app:cornerRadius="20dp"
+                    android:elevation="4dp"
+                    android:layout_marginBottom="10dp" />
+
+                <Button
+                    android:id="@+id/btn_select_seller"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Vendedor"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#F7C6DA"
+                    android:textColor="#3F1F2A"
+                    app:cornerRadius="20dp"
+                    android:elevation="4dp"
+                    android:layout_marginBottom="10dp" />
+            </LinearLayout>
+
+            <!-- Botón 2: Operaciones Pendientes -->
+            <Button
+                android:id="@+id/btn_pending_ops"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="10dp"
+                android:text="Operaciones pendientes"
+                android:textAllCaps="false"
+                android:backgroundTint="#8173E6"
+                android:textColor="@android:color/white"
+                app:cornerRadius="18dp"/>
+
+            <!-- Contenedor Sub-categorías Pendientes -->
+            <LinearLayout
+                android:id="@+id/layout_pending_subcategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="10dp"
+                android:layout_marginBottom="5dp">
+
+                <Button
+                    android:id="@+id/btn_cat_created"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Depósitos creados"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#9575CD"
+                    android:textColor="#FFFFFF"
+                    app:cornerRadius="12dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <Button
+                    android:id="@+id/btn_cat_funded"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Depósitos pagados"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#7E57C2"
+                    android:textColor="#FFFFFF"
+                    app:cornerRadius="12dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <Button
+                    android:id="@+id/btn_cat_approved"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Depósitos aprobados"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#673AB7"
+                    android:textColor="#FFFFFF"
+                    app:cornerRadius="12dp"
+                    android:layout_marginBottom="5dp"/>
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/scroll_pending_results"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:visibility="gone"
+                android:background="#C9C5E3"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_pending_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_pending_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Selecciona una categoría arriba."
+                        android:textColor="@android:color/black"
+                        android:gravity="center"
+                        android:padding="10dp"/>
+                </LinearLayout>
+            </ScrollView>
+
+            <!-- Botón 3: DISPUTAS -->
+            <Button
+                android:id="@+id/btn_main_disputes"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="10dp"
+                android:text="Disputas"
+                android:textAllCaps="false"
+                android:backgroundTint="#9C91EB"
+                android:textColor="@android:color/white"
+                app:cornerRadius="18dp"/>
+
+            <!-- CONTENEDOR PARA FRAGMENTOS HIJOS (Aquí se cargan Comprador/Vendedor/Disputas) -->
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

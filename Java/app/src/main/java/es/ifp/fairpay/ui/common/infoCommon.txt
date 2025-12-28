@@ -1,0 +1,1 @@
+Aquí se implementarán las actividades genéricas que se reutilizan en toda la app.

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_PreguntasFrecuentes"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4D5059"
+    android:padding="20dp"
+    tools:context=".ui.main.WalletFragment">
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="95dp"
+        android:background="@color/boton_principal"
+        app:labelVisibilityMode="labeled"
+        app:itemTextAppearanceActive="@color/white"
+        app:itemTextAppearanceActiveBoldEnabled="true"
+        app:itemIconTint="@color/bottom_nav_selector"
+        app:itemTextColor="@color/gris_claro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+    <ImageView
+        android:id="@+id/imageView_PreguntasFrecuentes"
+        android:layout_width="113dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="130dp"
+        android:src="@drawable/logo128x128"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_titulo_PreguntasFrecuentes" />
+
+    <TextView
+        android:id="@+id/text_titulo_PreguntasFrecuentes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
+        android:text="Preguntas Frecuentes"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <FrameLayout
+        android:id="@+id/frame1_PreguntasFrecuentes"
+        android:layout_width="291dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="#808080"
+        android:radius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_PreguntasFrecuentes">
+
+        <TextView
+            android:id="@+id/textView2_preguntasFrecuentes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="1 Pregunta\n \n      respuesta"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame2_PreguntasFrecuentes"
+        android:layout_width="291dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="#808080"
+        android:radius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame1_PreguntasFrecuentes">
+
+        <TextView
+            android:id="@+id/textView3_preguntasFrecuentes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="1 Pregunta\n \n      respuesta"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame3_PreguntasFrecuentes"
+        android:layout_width="291dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="#808080"
+        android:radius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame2_PreguntasFrecuentes">
+
+        <TextView
+            android:id="@+id/textView4_preguntasFrecuentes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="1 Pregunta\n \n      respuesta"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button1_PreguntasFrecuentes"
+        android:layout_width="295dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/boton_principal"
+        android:gravity="center"
+        android:text="Volver"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

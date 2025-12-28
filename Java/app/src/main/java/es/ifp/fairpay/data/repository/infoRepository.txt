@@ -1,0 +1,1 @@
+Intermediario entre Frontend y Backend

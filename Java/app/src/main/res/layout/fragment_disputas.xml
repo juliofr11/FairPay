@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#C9C5E3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <!-- LOG PROPIO DEL FRAGMENTO -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="#C9C5E3"
+            app:cardElevation="0dp">
+            <TextView
+                android:id="@+id/tv_resultado_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text=""
+                android:textColor="#333333"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- MENU PRINCIPAL DISPUTAS -->
+        <LinearLayout
+            android:id="@+id/layout_dispute_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:padding="15dp"
+            android:background="#AEDDFF">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gestión de disputas" android:textStyle="bold" android:paddingBottom="10dp" android:textColor="#103044" />
+            <Button android:id="@+id/btn_open_dispute_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Abrir disputa" android:textAllCaps="false" android:textColor="#FFFFFF" android:backgroundTint="#103044" app:cornerRadius="8dp" android:layout_marginBottom="10dp" />
+            <Button android:id="@+id/btn_resolve_dispute_list_menu" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Resolver disputa" android:textAllCaps="false" android:textColor="#FFFFFF" android:backgroundTint="#103044" app:cornerRadius="8dp" android:layout_marginBottom="10dp" />
+            <Button android:id="@+id/btn_dispute_back" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Volver" android:textAllCaps="false" android:backgroundTint="#4D5059" android:textColor="#FFFFFF" app:cornerRadius="8dp"/>
+        </LinearLayout>
+
+        <!-- FORMULARIO ABRIR DISPUTA -->
+        <LinearLayout
+            android:id="@+id/layout_open_dispute_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="10dp"
+            android:background="#AEDDFF">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Abrir nueva disputa" android:textStyle="bold" android:textColor="#103044"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="¿Quién eres?" android:textColor="#103044"/>
+            <Spinner android:id="@+id/spinner_dispute_role" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:minHeight="48dp" />
+            <EditText android:id="@+id/input_dispute_escrow_id" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="ID del depósito" android:textColorHint="#4D5059" android:inputType="number" android:textColor="#103044" android:padding="12dp" android:background="#FFFFFF" android:layout_marginTop="10dp"/>
+            <EditText android:id="@+id/input_dispute_reason" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Explicación de la disputa..." android:textColorHint="#4D5059" android:inputType="textMultiLine" android:textColor="#103044" android:minLines="3" android:padding="12dp" android:background="#FFFFFF" android:layout_marginTop="10dp"/>
+            <Button android:id="@+id/btn_submit_dispute" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Enviar" android:textAllCaps="false" android:backgroundTint="#103044" android:textColor="#FFFFFF" app:cornerRadius="8dp" android:layout_marginTop="10dp"/>
+            <Button android:id="@+id/btn_open_dispute_back" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Volver" android:textAllCaps="false" android:backgroundTint="#4D5059" android:textColor="#FFFFFF" app:cornerRadius="8dp" android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <!-- LISTA DE DISPUTAS -->
+        <LinearLayout
+            android:id="@+id/layout_resolve_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Disputas" android:gravity="center" android:textStyle="bold" android:textSize="18sp" android:paddingBottom="15dp" android:textColor="@android:color/black" />
+            <LinearLayout android:id="@+id/container_disputes_buttons" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"/>
+            <Button android:id="@+id/btn_resolve_list_back" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Volver" android:textAllCaps="false" android:backgroundTint="#4D5059" android:textColor="#FFFFFF" app:cornerRadius="8dp" android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <!-- DETALLE Y ACCIONES RESOLUCIÓN -->
+        <LinearLayout
+            android:id="@+id/layout_resolve_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="10dp"
+            android:background="#AEDDFF">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Detalle de disputa" android:textStyle="bold" android:paddingBottom="10dp" android:textColor="#103044" />
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/swipe_refresh_dispute" android:layout_width="match_parent" android:layout_height="180dp" android:layout_marginBottom="10dp">
+                <ScrollView android:id="@+id/scroll_dispute_history" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#FFFFFF">
+                    <LinearLayout android:id="@+id/container_dispute_history" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="10dp"></LinearLayout>
+                </ScrollView>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            <Button android:id="@+id/btn_goto_resolve_form" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Resolver disputa" android:textAllCaps="false" android:layout_marginTop="10dp" android:backgroundTint="#103044" app:cornerRadius="8dp" android:textColor="@android:color/white"/>
+            <Button android:id="@+id/btn_request_platform_review" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Solicitar revisión FairPay" android:textAllCaps="false" android:layout_marginTop="10dp" android:backgroundTint="#FF9800" app:cornerRadius="8dp" android:textColor="@android:color/white" android:visibility="gone"/>
+            <Button android:id="@+id/btn_reply_dispute" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Responder / Añadir comentario" android:textAllCaps="false" android:layout_marginTop="10dp" android:backgroundTint="#103044" app:cornerRadius="8dp" android:textColor="@android:color/white" android:visibility="visible"/>
+            <Button android:id="@+id/btn_resolve_action_back" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Volver" android:textAllCaps="false" android:layout_marginTop="10dp" android:backgroundTint="#4D5059" app:cornerRadius="8dp" android:textColor="@android:color/white"/>
+
+            <LinearLayout android:id="@+id/layout_final_resolve_form" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone" android:layout_marginTop="10dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ID depósito:" android:textColor="#103044"/>
+                <EditText android:id="@+id/input_resolve_id" android:layout_width="match_parent" android:layout_height="wrap_content" android:enabled="false" android:textColor="#103044" android:background="#FFFFFF"/>
+                <EditText android:id="@+id/input_platform_key" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Clave privada FairPay (0x...)" android:textColorHint="#4D5059" android:inputType="textPassword" android:textColor="#103044" android:layout_marginTop="10dp" android:padding="10dp" android:background="#FFFFFF"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Decisión (RefundBuyer):" android:textColor="#103044"/>
+                <Spinner android:id="@+id/spinner_resolve_decision" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:layout_marginTop="10dp" />
+                <Button android:id="@+id/btn_execute_resolve" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Ejecutar resolución" android:textAllCaps="false" android:backgroundTint="#103044" android:textColor="#FFFFFF" app:cornerRadius="8dp" android:layout_marginTop="10dp"/>
+                <Button android:id="@+id/btn_resolve_final_back" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Volver" android:textAllCaps="false" android:backgroundTint="#4D5059" android:textColor="#FFFFFF" app:cornerRadius="8dp" android:layout_marginTop="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

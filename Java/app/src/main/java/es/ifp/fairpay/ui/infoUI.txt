@@ -1,0 +1,1 @@
+Paquete para todo lo que se relaciona con el frontend.

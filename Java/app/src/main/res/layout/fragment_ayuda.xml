@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_ayuda"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4D5059"
+    android:padding="20dp"
+    tools:context=".ui.main.profile.help.HelpFragment">
+
+    <TextView
+        android:id="@+id/text_titulo_PreguntasFrecuentes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
+        android:text="Ayuda"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <FrameLayout
+        android:id="@+id/frame_ayuda"
+        android:layout_width="283dp"
+        android:layout_height="156dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="#808080"
+        android:radius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_PreguntasFrecuentes">
+
+
+        <ListView
+            android:id="@+id/listView_ayuda"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white" />
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView_PreguntasFrecuentes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="130dp"
+        android:src="@drawable/logo128x128"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_titulo_PreguntasFrecuentes" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

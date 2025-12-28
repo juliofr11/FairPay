@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/walletFragment"
+    tools:ignore="ExtraText">
+
+    <fragment
+        android:id="@+id/operacionesFragment"
+        android:name="es.ifp.fairpay.ui.main.operations.OperacionesFragment"
+        android:label="fragment_operaciones"
+        tools:layout="@layout/fragment_operaciones" />
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="es.ifp.fairpay.ui.main.profile.PerfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
+    <fragment
+        android:id="@+id/movimientosFragment"
+        android:name="es.ifp.fairpay.ui.main.movements.MovimientosFragment"
+        android:label="fragment_movimientos"
+        tools:layout="@layout/fragment_movimientos" />
+    <fragment
+        android:id="@+id/agendaFragment"
+        android:name="es.ifp.fairpay.ui.main.agenda.AgendaFragment"
+        android:label="fragment_agenda"
+        tools:layout="@layout/fragment_agenda" >
+        <action
+            android:id="@+id/action_agendaFragment_to_anadirContactoFragment"
+            app:destination="@id/anadirContactoFragment" />
+        <action
+            android:id="@+id/action_agendaFragment_to_contactoFragment"
+            app:destination="@id/contactoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="es.ifp.fairpay.ui.main.WalletFragment"
+        android:label="fragment_wallet"
+        tools:layout="@layout/fragment_wallet" />
+    <fragment
+        android:id="@+id/fragment_ayuda"
+        android:name="es.ifp.fairpay.ui.main.profile.help.HelpFragment"
+        android:label="fragment_ayuda"
+        tools:layout="@layout/fragment_ayuda" />
+    <fragment
+        android:id="@+id/fragment_modificar_datos"
+        android:name="es.ifp.fairpay.ui.main.profile.ModificarDatosFragment"
+        android:label="fragment_modificar_datos"
+        tools:layout="@layout/fragment_modificar_datos" />
+    <fragment
+        android:id="@+id/fragment_sobre_nosotros"
+        android:name="es.ifp.fairpay.ui.main.profile.SobreNosotrosFragment"
+        android:label="fragment_sobre_nosotros"
+        tools:layout="@layout/fragment_sobre_nosotros"/>
+    <fragment
+        android:id="@+id/anadirContactoFragment"
+        android:name="es.ifp.fairpay.ui.main.agenda.AnadirContactoFragment"
+        android:label="fragment_anadir_contacto"
+        tools:layout="@layout/fragment_anadir_contacto" />
+    <fragment
+        android:id="@+id/contactoFragment"
+        android:name="es.ifp.fairpay.ui.main.agenda.ContactoFragment"
+        android:label="fragment_contacto"
+        tools:layout="@layout/fragment_contacto" >
+        <action
+            android:id="@+id/action_contactoFragment_to_eliminarContactoFragment"
+            app:destination="@id/eliminarContactoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eliminarContactoFragment"
+        android:name="es.ifp.fairpay.ui.main.agenda.EliminarContactoFragment"
+        android:label="fragment_eliminar_contacto"
+        tools:layout="@layout/fragment_eliminar_contacto" >
+        <action
+            android:id="@+id/action_eliminarContactoFragment_to_agendaFragment"
+            app:destination="@id/agendaFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Paleta de colores establecidas -->
+    <color name="fondo_activity">#C9C5E3</color>
+    <color name="fondo_panel">#AB99DD</color>
+    <color name="boton_panel">#967BDB</color>
+    <color name="boton_principal">#6554D1</color>
+    <color name="boton_secundario">#8A7DE1</color>
+    <color name="gris_oscuro">#4D5059</color>
+    <color name="gris_claro">#E0E0E0</color>
+    <color name="mostaza">#E8C547</color>
+    <color name="transparente">#00FFFFFF</color>
+</resources>

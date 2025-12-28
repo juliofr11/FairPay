@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_seguridad"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4D5059"
+    android:padding="20dp">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="95dp"
+        android:background="@color/boton_principal"
+        app:labelVisibilityMode="labeled"
+        app:itemTextAppearanceActive="@color/white"
+        app:itemTextAppearanceActiveBoldEnabled="true"
+        app:itemIconTint="@color/bottom_nav_selector"
+        app:itemTextColor="@color/gris_claro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <TextView
+        android:id="@+id/text_titulo_PreguntasFrecuentes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
+        android:text="Seguridad y Privacidad"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <FrameLayout
+        android:id="@+id/frame_contactos_agenda"
+        android:layout_width="319dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="#808080"
+        android:radius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_PreguntasFrecuentes">
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white" />
+    </FrameLayout>
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="325dp"
+        android:layout_height="41dp"
+        android:backgroundTint="#808080"
+        android:gravity="center"
+        android:text="Eliminar cuenta"
+        android:textColor="#FFC107"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1_disputar"
+        app:layout_constraintVertical_bias="0.855" />
+
+    <ImageView
+        android:id="@+id/imageView_PreguntasFrecuentes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="130dp"
+        android:src="@drawable/logo128x128"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_titulo_PreguntasFrecuentes" />
+
+    <Button
+        android:id="@+id/button1_disputar"
+        android:layout_width="319dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="96dp"
+        android:backgroundTint="#808080"
+        android:gravity="center"
+        android:text="Dispositivos vinculados"
+        android:textColor="@color/white"
+
+        android:textSize="19dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_contactos_agenda"
+        app:layout_constraintVertical_bias="0.149" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,145 @@
+<resources>
+    <string name="app_name">FairPay</string>
+    <!-- Strings de la barra de navegación -->
+    <string name="boton_vertodomovimientos_wallet">Ver todos los movimientos</string>
+    <string name="operaciones_navbar">Operaciones</string>
+    <string name="wallet_navbar">Wallet</string>
+    <string name="movimientos_navbar">Movimientos</string>
+    <string name="agenda_navbar">Agenda</string>
+    <string name="perfil_navbar">Perfil</string>
+    <!-- Strings de los Fragments -->
+    <string name="operaciones_fragment">Operaciones</string>
+    <string name="perfil_fragment">Perfil</string>
+    <string name="movimientos_fragment">Movimientos</string>
+    <string name="agenda_fragment">Agenda</string>
+    <string name="wallet_fragment">Wallet</string>
+    <!-- Strings del Login -->
+    <string name="login_titulo">Sign In</string>
+    <string name="email">Email</string>
+    <string name="password">Contraseña</string>
+    <string name="check_sesion">Mantener la sesión iniciada</string>
+    <string name="boton_login">Iniciar Sesión</string>
+    <string name="texto_registro">¿No tienes una cuenta? Regístrate</string>
+    <!-- Strings del Registro -->
+    <string name="registro_titulo">Sign Up</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="telefono">Teléfono</string>
+    <string name="wallet">Wallet</string>
+    <string name="password_otravez">Vuelva a introducir la contraseña</string>
+    <string name="privacidad_terminos">Acepto la políticas de privacidad y los términos y condiciones de uso</string>
+    <string name="boton_registrar">Registrarse</string>
+    <string name="toast_terminos">Debe aceptar las Políticas de Privacidad y Términos y Condiciones de Uso</string>
+    <!-- String Fragment Wallet -->
+    <string name="divisa">Mi Cartera · EUR</string>
+    <string name="solicitudes">Última solicitud pendiente</string>
+    <string name="ultimos_movimientos">Últimos movimientos</string>
+    <string name="boton_movimientos">Ver todo</string>
+    <!-- String Fragment Agenda -->
+    <string name="anadircontacto">Añadir Contacto</string>
+    <string name="campo_nombre">Introducir nombre completo</string>
+    <string name="campo_alias">Introducir alias</string>
+    <string name="campo_wallet">Introducir wallet</string>
+    <string name="titulo_contacto">Contacto</string>
+    <string name="boton_eliminar_contacto">Eliminar contacto</string>
+    <string name="boton_solicitar">Solicitar Dinero</string>
+    <string name="boton_enviar">Enviar Dinero</string>
+    <string name="titulo_eliminar_contacto">Eliminar Contacto</string>
+    <string name="texto_info_eliminar_contacto">¿Realmente desea eliminar el contacto de forma definitiva?\n\nEsta acción no se puede deshacer y toda la información será borrada</string>
+
+    <!-- Strings varios -->
+    <string name="registro_ok">Tu registro se ha completado\n¡Gracias!</string>
+    <string name="boton_aceptar">Aceptar</string>
+    <string name="boton_cancelar">Cancelar</string>
+    <string name="campos_obligatorios">Todos los campos son obligatorios</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Strings Fragment movimientos -->
+    <string name="titulo_movimientos">Movimientos</string>
+    <string name="buscar_movimientos">Buscar...</string>
+
+    <!-- Strings Fragmento operaciones -->
+    <string name="titulo_operaciones">Operaciones</string>
+    <string name="boton_enviar_operaciones">Enviar dinero</string>
+    <string name="boton_Solicitar_operaciones">Solicitar dinero</string>
+
+    <!-- DisputarMensaje Activity -->
+    <string name="hint_informar_Disputar">Introduzca aquí información adicional, especialmente si ha seleccionado la opción de otros.</string>
+    <string name="texto_experiencia_negativa">Sentimos esta experiencia negativa.\n\nPuedes aportar información adicional si lo deseas.</string>
+
+    <!-- DisputarOk Activity -->
+    <string name="texto_contacto_gracias">Nos pondremos en contacto contigo por correo para solucionarlo.\n¡Gracias!</string>
+
+    <!-- Informar de un problema -->
+    <string name="titulo_informar_problema">Informar de un problema</string>
+    <string name="hint_informar_problema">Escribe aquí el problema...</string>
+    <string name="texto_detallar_problema">Para poder conocer mejor el problema, trate de detallar los pasos.</string>
+    <string name="texto_gracias_informar_problema">Gracias por la información, lo tendremos en cuenta y lo investigaremos cuanto antes.</string>
+
+    <!-- Modificar datos -->
+    <string name="titulo_modificar_datos">Modificar Datos</string>
+    <string name="hint_email_modificar">example@example.com</string>
+    <string name="hint_nick_modificar">nickusuario</string>
+    <string name="hint_telefono_modificar">Introducir Teléfono</string>
+    <string name="texto_datos_modificados">Sus datos se han modificado correctamente.</string>
+
+    <!-- Términos y condiciones -->
+    <string name="titulo_terminos_condiciones">Términos y Condiciones</string>
+    <string name="texto_terminos_parte1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis eros ac malesuada aliquam. Vivamus nec felis vel lorem consequat pretium et ac lacus. Sed efficitur in lectus eu placerat. Curabitur dictum consectetur felis accumsan consequat. Nam imperdiet orci non hendrerit rutrum. Curabitur eget varius lacus. Fusce consectetur faucibus ante vitae ultrices. Proin pulvinar ligula venenatis turpis pretium, id convallis nisl imperdiet.</string>
+    <string name="texto_terminos_parte2">Maecenas vestibulum pretium sem vitae feugiat. In lobortis libero quam, id scelerisque arcu feugiat sit amet. Proin scelerisque orci quis molestie tempor.</string>
+
+
+    <!-- Ayuda -->
+    <string name="titulo_ayuda">Ayuda</string>
+    <string name="disputar_transaccion_ayuda">Disputar transacción</string>
+    <string name="informar_problema_ayuda">Informar de un problema</string>
+    <string name="preguntas_frecuentes_ayuda">Preguntas frecuentes</string>
+
+    <!-- Dispositivos Vinculados -->
+    <string name="titulo_dispositivos_vinculados">Dispositivos Vinculados</string>
+
+    <!--  Disputar Transacción -->
+    <string name="titulo_disputar_transaccion">Disputar Transacción</string>
+    <string name="texto_seleccione_transaccion">Seleccione la transacción que desea reportar</string>
+    <string name="texto_seleccione_motivo">Seleccione el motivo de la disputa</string>
+    <string name="boton_disputa_transaccion_fraudulenta">Transacciones fraudulentas</string>
+    <string name="boton_disputa_servicio_no_prestado">Servicios no prestados</string>
+    <string name="boton_disputa_otro">Otro</string>
+
+    <!-- Eliminar Cuenta -->
+    <string name="titulo_eliminar_cuenta">Eliminar Cuenta</string>
+    <string name="texto_confirmar_eliminar">¿Realmente desea eliminar la cuenta de forma definitiva?
+        Esta acción no se puede deshacer y toda la información será borrada.</string>
+    <string name="boton_eliminar_cuenta">Eliminar cuenta</string>
+
+    <!--Seguridad y Privacidad -->
+    <string name="titulo_seguridad_privacidad">Seguridad y Privacidad</string>
+    <string name="boton_seguridad_dispositivos_vinculados">Dispositivos vinculados</string>
+
+    <!-- Política de Privacidad -->
+    <string name="titulo_politica_privacidad">Política de Privacidad</string>
+    <string name="texto_politica_parte1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis eros ac malesuada aliquam. Vivamus nec felis vel lorem consequat pretium et ac lacus. Sed efficitur in lectus eu placerat. Curabitur dictum consectetur felis accumsan consequat. Nam imperdiet orci non hendrerit rutrum. Curabitur eget varius lacus. Fusce consectetur faucibus ante vitae ultrices. Proin pulvinar ligula venenatis turpis pretium, id convallis nisl imperdiet.</string>
+    <string name="texto_politica_parte2">Maecenas vestibulum pretium sem vitae feugiat. In lobortis libero quam, id scelerisque arcu feugiat sit amet. Proin scelerisque orci quis molestie tempor.</string>
+
+    <!-- Preguntas Frecuentes -->
+    <string name="titulo_preguntas_frecuentes">Preguntas Frecuentes</string>
+    <string name="pregunta1">1 Pregunta\n\nrespuesta</string>
+    <string name="pregunta2">2 Pregunta\n\nrespuesta</string>
+    <string name="pregunta3">3 Pregunta\n\nrespuesta</string>
+
+    <!-- Sobre Nosotros -->
+    <string name="titulo_sobre_nosotros">Sobre nosotros</string>
+    <string name="correo_sobre_nosotros">customerhelp@fairpay.com</string>
+    <string name="version_app">Versión Alpha 0.0.1</string>
+
+    <!-- perfil -->
+    <string name="perfil_ayuda">Ayuda</string>
+    <string name="perfil_modificar_datos">Modificar datos</string>
+    <string name="perfil_sobre_nosotros">Sobre nosotros</string>
+    <string name="perfil_seguridad_privacidad">Seguridad y privacidad</string>
+    <string name="perfil_cerrar_sesion">Cerrar sesión</string>
+
+
+
+</resources>

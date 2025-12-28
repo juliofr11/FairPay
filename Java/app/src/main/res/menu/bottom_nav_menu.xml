@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--  Importante que el id sea igual al del fragment -->
+    <item
+        android:id="@+id/walletFragment"
+        android:icon="@drawable/wallet_navbar"
+        android:title="@string/wallet_navbar" />
+    <item
+        android:id="@+id/movimientosFragment"
+        android:icon="@drawable/movimientos_navbar"
+        android:title="@string/movimientos_navbar" />
+    <item
+        android:id="@+id/operacionesFragment"
+        android:icon="@drawable/operaciones_navbar"
+        android:title="@string/operaciones_navbar" />
+    <item
+        android:id="@+id/agendaFragment"
+        android:icon="@drawable/agenda_navbar"
+        android:title="@string/agenda_navbar" />
+    <item
+        android:id="@+id/perfilFragment"
+        android:icon="@drawable/perfil_navbar"
+        android:title="@string/perfil_navbar" />
+</menu>

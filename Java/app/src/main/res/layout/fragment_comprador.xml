@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#C9C5E3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <!-- LOG PROPIO DEL FRAGMENTO -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="8dp"
+            app:cardBackgroundColor="#C9C5E3"
+            app:cardElevation="0dp">
+            <TextView
+                android:id="@+id/tv_resultado_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text=""
+                android:textColor="#333333"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- MENÚ COMPRADOR -->
+        <LinearLayout
+            android:id="@+id/layout_buyer_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:background="#B8E4C9"
+            android:padding="15dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Acciones de comprador" android:textStyle="bold" android:paddingBottom="10dp" android:textColor="#1D3B2F" />
+            <Button android:id="@+id/btn_buyer_new" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Realizar nuevo depósito" android:textAllCaps="false" android:backgroundTint="#1D3B2F" android:textColor="#FFFFFF" app:cornerRadius="8dp" />
+            <Button android:id="@+id/btn_buyer_existing" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Recuperar depósito" android:textAllCaps="false" android:backgroundTint="#1D3B2F" android:textColor="#FFFFFF" app:cornerRadius="8dp" android:layout_marginTop="10dp"/>
+            <Button android:id="@+id/btn_buyer_back" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Volver" android:textAllCaps="false" android:backgroundTint="#4D5059" android:textColor="#FFFFFF" app:cornerRadius="8dp" android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <!-- FORMULARIOS -->
+        <LinearLayout
+            android:id="@+id/layout_forms_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="#B8E4C9"
+            android:padding="10dp">
+
+            <LinearLayout android:id="@+id/layout_create_escrow" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+                <EditText android:id="@+id/input_private_key" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Tu clave privada" android:textColorHint="#4D5059" android:background="#FFFFFF" android:inputType="textPassword" android:textColor="#1D3B2F" android:padding="10dp"/>
+                <EditText android:id="@+id/input_seller" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Dirección del vendedor" android:textColorHint="#4D5059" android:background="#FFFFFF" android:textColor="#1D3B2F" android:padding="10dp" android:layout_marginTop="10dp"/>
+                <Button android:id="@+id/button_enviar_create_escrow" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Crear depósito" android:textAllCaps="false" android:backgroundTint="#1D3B2F" android:textColor="#FFFFFF" app:cornerRadius="8dp" android:layout_marginTop="10dp"/>
+                <Button android:id="@+id/button_search_id" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Buscar ID confirmado" android:textAllCaps="false" android:backgroundTint="#1D3B2F" android:textColor="#FFFFFF" app:cornerRadius="8dp" android:visibility="gone" android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/layout_fund_escrow" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+                <EditText android:id="@+id/input_escrow_id" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Id depósito" android:textColorHint="#4D5059" android:background="#FFFFFF" android:enabled="false" android:textColor="#1D3B2F" android:padding="10dp"/>
+                <EditText android:id="@+id/input_private_key_fund" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Tu clave privada" android:textColorHint="#4D5059" android:background="#FFFFFF" android:inputType="textPassword" android:textColor="#1D3B2F" android:padding="10dp" android:layout_marginTop="10dp"/>
+                <EditText android:id="@+id/input_fund_amount" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Cantidad (ETH)" android:textColorHint="#4D5059" android:background="#FFFFFF" android:inputType="numberDecimal" android:textColor="#1D3B2F" android:padding="10dp" android:layout_marginTop="10dp"/>
+                <Button android:id="@+id/button_fund_escrow" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Hacer pago" android:textAllCaps="false" android:backgroundTint="#1D3B2F" android:textColor="#FFFFFF" app:cornerRadius="8dp" android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/layout_buyer_approve" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+                <Button android:id="@+id/button_buyer_approve" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Aprobar recepción" android:textAllCaps="false" android:backgroundTint="#1D3B2F" android:textColor="#FFFFFF" app:cornerRadius="8dp" />
+            </LinearLayout>
+
+            <Button android:id="@+id/btn_form_back_buyer" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Volver" android:textAllCaps="false" android:backgroundTint="#4D5059" android:textColor="#FFFFFF" app:cornerRadius="8dp" android:layout_marginTop="20dp"/>
+        </LinearLayout>
+
+        <!-- FORMULARIO RECUPERAR -->
+        <LinearLayout
+            android:id="@+id/layout_existing_escrow_buyer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="#B8E4C9"
+            android:padding="10dp">
+            <EditText android:id="@+id/input_existing_escrow_id" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="ID del depósito" android:textColorHint="#4D5059" android:background="#FFFFFF" android:inputType="number" android:textColor="#1D3B2F" android:padding="10dp" android:layout_marginBottom="10dp"/>
+            <Button android:id="@+id/btn_check_escrow_status" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Consultar y continuar" android:textAllCaps="false" android:backgroundTint="#1D3B2F" android:textColor="#FFFFFF" app:cornerRadius="8dp" android:layout_marginTop="10dp"/>
+            <Button android:id="@+id/btn_existing_back_buyer" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Volver" android:textAllCaps="false" android:backgroundTint="#4D5059" android:textColor="#FFFFFF" app:cornerRadius="8dp" android:layout_marginTop="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/PoliticaDePrivacidad"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4D5059"
+    android:padding="20dp"
+    tools:context=".ui.main.WalletFragment">
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="95dp"
+        android:background="@color/boton_principal"
+        app:labelVisibilityMode="labeled"
+        app:itemTextAppearanceActive="@color/white"
+        app:itemTextAppearanceActiveBoldEnabled="true"
+        app:itemIconTint="@color/bottom_nav_selector"
+        app:itemTextColor="@color/gris_claro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <TextView
+        android:id="@+id/text_titul_TerminosYCondiciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
+        android:text="Politica De Privacidad"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/button1_TerminosYCondiciones"
+        android:layout_width="205dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/boton_principal"
+        android:gravity="center"
+        android:text="Volver"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/TextView2_TerminosYCondiciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="20dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis eros ac malesuada aliquam. Vivamus nec felis vel lorem consequat pretium et ac lacus. Sed efficitur in lectus eu placerat. Curabitur dictum consectetur felis accumsan consequat. Nam imperdiet orci non hendrerit rutrum. Curabitur eget varius lacus. Fusce consectetur faucibus ante vitae ultrices. Proin pulvinar ligula venenatis turpis pretium, id convallis nisl imperdiet."
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_titul_TerminosYCondiciones" />
+
+    <TextView
+        android:id="@+id/textView3_TerminosYCondiciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="166dp"
+        android:layout_marginEnd="167dp"
+        android:text="Maecenas vestibulum pretium sem vitae feugiat. In lobortis libero quam, id scelerisque arcu feugiat sit amet. Proin scelerisque orci quis molestie tempor. "
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextView2_TerminosYCondiciones" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

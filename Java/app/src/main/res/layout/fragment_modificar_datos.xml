@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_modificar_datos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4D5059"
+    android:padding="20dp">
+
+    <!-- 🔹 Título -->
+    <TextView
+        android:id="@+id/text_titulo_ModificarDatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
+        android:text="Modificar Datos"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 🔹 Imagen del logo -->
+    <ImageView
+        android:id="@+id/imageView_ModificarDatos"
+        android:layout_width="112dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logo128x128"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_titulo_ModificarDatos" />
+
+    <!-- 🔹 Campo: Nombre -->
+    <EditText
+        android:id="@+id/edit1_nombre_modificar"
+        android:layout_width="320dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:fontFamily="@font/open_sans"
+        android:hint="example@example.com"
+        android:inputType="text"
+        android:paddingStart="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView_ModificarDatos" />
+
+    <!-- 🔹 Campo: Nick -->
+    <EditText
+        android:id="@+id/edit2_nick_modificar"
+        android:layout_width="320dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:fontFamily="@font/open_sans"
+        android:hint="nickusuario"
+        android:inputType="text"
+        android:paddingStart="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit1_nombre_modificar" />
+
+    <!-- 🔹 Campo: Teléfono -->
+    <EditText
+        android:id="@+id/edit2_telefono_modificar_modificar"
+        android:layout_width="320dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:fontFamily="@font/open_sans"
+        android:hint="Introducir teléfono"
+        android:inputType="phone"
+        android:paddingStart="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit2_nick_modificar" />
+
+    <!-- 🔹 Spinner de divisa -->
+    <Spinner
+        android:id="@+id/spinnerDivisa"
+        android:layout_width="320dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:padding="8dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit2_telefono_modificar_modificar" />
+
+    <!-- 🔹 Botón Aceptar -->
+    <Button
+        android:id="@+id/button_aceptar_modificar"
+        android:layout_width="217dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:text="Aceptar"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/boton_principal"
+        android:textColor="@color/white"
+        app:cornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerDivisa" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

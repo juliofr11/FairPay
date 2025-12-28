@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permisos -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-feature
+        android:name="android.hardware.biometrics"
+        android:required="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo_fairpay"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo_fairpay"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FairPay"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".ui.common.OkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.authenticator.LoadScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.authenticator.RegistroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.authenticator.InicioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.authenticator.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/EliminarCuenta"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4D5059"
+    android:padding="20dp"
+    tools:context=".ui.main.WalletFragment">
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="95dp"
+        android:background="@color/boton_principal"
+        app:labelVisibilityMode="labeled"
+        app:itemTextAppearanceActive="@color/white"
+        app:itemTextAppearanceActiveBoldEnabled="true"
+        app:itemIconTint="@color/bottom_nav_selector"
+        app:itemTextColor="@color/gris_claro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <TextView
+        android:id="@+id/text_titulo_PreguntasFrecuentes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
+        android:text="Eliminar Cuenta"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <FrameLayout
+        android:id="@+id/frame_ayuda"
+        android:layout_width="283dp"
+        android:layout_height="156dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="#808080"
+        android:radius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_titulo_PreguntasFrecuentes">
+
+
+        <TextView
+            android:id="@+id/textView2_"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="¿Realmente desea eliminar la cuenta de forma definitiva? Esta acción no se puede deshacer y toda la información será borrada"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="22sp" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button1_cancelar"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/boton_principal"
+        android:gravity="center"
+        android:text="Cancelar"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_ayuda"
+        app:layout_constraintVertical_bias="0.725" />
+
+    <Button
+        android:id="@+id/button2_eliminar"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/boton_principal"
+        android:gravity="center"
+        android:text="Eliminar cuenta"
+        android:textColor="#FFC107"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame_ayuda"
+        app:layout_constraintVertical_bias="0.327" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
